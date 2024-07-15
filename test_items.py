@@ -5,6 +5,9 @@ from selenium.webdriver.common.by import By
 
 
 def test_basket_is_present(browser):
+    url = "http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/"
+    browser.get(url)
+    
     add_to_basket_xpath = "//*[@id='add_to_basket_form']//button"
 
     try:
