@@ -23,10 +23,6 @@ def browser(request):
 
     browser = webdriver.Chrome(options=options)
 
-    url = f"http://selenium1py.pythonanywhere.com/{str(language)}/catalogue/coders-at-work_207/"
-    logging.debug("Opening url: %s", url)
-    browser.get(url)
-
     yield browser
 
     logging.debug("\nQuitting the browser...")
